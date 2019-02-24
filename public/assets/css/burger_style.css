@@ -29,7 +29,15 @@ input {
     margin-bottom: 1em;
 }
 
-button {
+.devour-burger{
+    width: auto;
+    font-family: 'Mukta', sans-serif;
+    font-size: 10px;
+    text-align: center;
+    /* border-radius: 15px; */
+}
+
+#add-button {
     width: 10em;
     font-family: 'Mukta', sans-serif;
     font-size: 18px;

@@ -5,20 +5,18 @@
     <div id="devourable-container">
          <h2>Devourable Burgers</h2>
                 {{#each burgers}}
-                {{#unless devoured}}
-                        <p>{{burgerName}}<p>
-                    {{!-- {{> burgers/burger-block devoured=false}} --}}
-                {{/unless}}
+                    {{#unless devoured}}
+                        <p>{{burgerName}} {{> burgers/burger-block devoured=false}}<p>
+                    {{/unless}}
                 {{/each}}
     </div>
 
     <div id="devoured-container">
         <h2>Devoured Burgers</h2>
                 {{#each burgers}}
-                {{#if devoured}}
-                    <p>{{burgerName}}</p>
-                    {{!-- {{> burgers/burger-block devoured=true}} --}}
-                {{/if}}
+                    {{#if devoured}}
+                        <p>{{burgerName}}</p>
+                    {{/if}}
                 {{/each}}
     </div>
    
@@ -31,5 +29,5 @@
             <input type="text" id="burgerName" name="name">
         </div>
 
-        <button type="submit">Add Burger</button>
+        <button type="submit" id="add-button">Add Burger</button>
     </form>
