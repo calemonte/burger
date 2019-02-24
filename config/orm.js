@@ -51,6 +51,20 @@ const orm = {
 
       cb(result);
     });
+  },
+
+  delete: function(table, condition, cb) {
+    let queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
+
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
   }
 };
 
@@ -74,13 +88,13 @@ function objToSql(ob) {
 }
 
 function printQuestionMarks(num) {
-    var arr = [];
-  
-    for (var i = 0; i < num; i++) {
-      arr.push("?");
-    }
-  
-    return arr.toString();
+  var arr = [];
+
+  for (var i = 0; i < num; i++) {
+    arr.push("?");
   }
+
+  return arr.toString();
+}
 
 module.exports = orm;
