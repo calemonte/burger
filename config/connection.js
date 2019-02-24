@@ -1,8 +1,8 @@
 "use strict";
 
-// require("dotenv").config();
+require("dotenv").config();
 const mysql = require("mysql");
-// const keys = require("./keys");
+const keys = require("./keys");
 var connection;
 
 if (process.env.JAWSDB_URL) {
@@ -12,8 +12,7 @@ if (process.env.JAWSDB_URL) {
     host: "localhost",
     port: 3306,
     user: "root",
-    // password: keys.mysqlDB.id,
-    password: "yourPassword",
+    password: keys.mysqlDB.id,
     database: "burgers_db"
   });
 }
