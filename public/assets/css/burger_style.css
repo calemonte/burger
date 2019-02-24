@@ -1,3 +1,62 @@
 body {
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    background: #fc4a1a; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fc4a1a, #f7b733); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fc4a1a, #f7b733); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+    font-family: 'Coiny', cursive;
+    font-size: 58px;
+}
+
+h2 {
+    font-size: 38px;
+}
+
+p {
+    margin: 2em;
+}
+
+input {
+    width: 20em;
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+
+button {
+    width: 10em;
+    font-family: 'Mukta', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#display {
+    width: 50%;
+    margin: 2px auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+
+#devoured-container, 
+#devourable-container {
+    justify-content: center; 
+    margin: 2px 5%;
+}
+
+@media only screen and (max-width: 810px) {
+    
+    #display {
+        flex-direction: column;
+        width: 90%;
+    }
+
 }
