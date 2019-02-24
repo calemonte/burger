@@ -4,20 +4,20 @@
 
     <div id="devourable-container">
          <h2>Devourable Burgers</h2>
-                {{#each burgers}}
-                    {{#unless devoured}}
-                        <p>{{burgerName}} {{> burgers/burger-block devoured=false}}<p>
-                    {{/unless}}
-                {{/each}}
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <p>{{burgerName}} {{> burgers/burger-block devoured=false}}<p>
+                {{/unless}}
+            {{/each}}
     </div>
 
     <div id="devoured-container">
         <h2>Devoured Burgers</h2>
-                {{#each burgers}}
-                    {{#if devoured}}
-                        <p>{{burgerName}}</p>
-                    {{/if}}
-                {{/each}}
+            {{#each burgers}}
+                {{#if devoured}}
+                    <p>{{burgerName}}</p>
+                {{/if}}
+            {{/each}}
     </div>
    
 </div>

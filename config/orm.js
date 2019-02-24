@@ -14,19 +14,19 @@ const orm = {
     });
   },
 
-  insertOne: function(table, cols, val, cb) {
+  insertOne: function(table, cols, vals, cb) {
     let queryString = "INSERT INTO " + table;
 
     queryString += " (";
     queryString += cols.toString();
     queryString += ") ";
     queryString += "VALUES (";
-    queryString += val;
+    queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
     console.log(queryString);
 
-    connection.query(queryString, val, function(err, result) {
+    connection.query(queryString, vals, function(err, result) {
       if (err) {
         throw err;
       }
@@ -72,5 +72,15 @@ function objToSql(ob) {
 
   return arr.toString();
 }
+
+function printQuestionMarks(num) {
+    var arr = [];
+  
+    for (var i = 0; i < num; i++) {
+      arr.push("?");
+    }
+  
+    return arr.toString();
+  }
 
 module.exports = orm;
