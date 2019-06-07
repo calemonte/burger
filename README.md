@@ -29,4 +29,4 @@ This was built by Kenny Whitebloom (https://github.com/calemonte) as part of a c
 
 ## Notes
 
-The Heroku deployment is currently not working properly. I will update this once the issue has been resolved.
+I was unable to spend mcuh time working on a more interesting implementation of this (homework) app.
